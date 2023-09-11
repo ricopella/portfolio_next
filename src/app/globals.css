@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-gradient: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  )
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +19,8 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --background: hsla(210, 10%, 9%, 1);
+    --extra-light-grey: hsla(210, 10%, 14%, 1);
   }
 }
 
@@ -22,12 +30,7 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background: var(--background-gradient); */
 
-    /* background: hsla(210, 10%, 9%, 1); */
+    background: hsla(210, 10%, 9%, 1);
 }
