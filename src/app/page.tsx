@@ -1,3 +1,6 @@
+'use client';
+
+import Sider from '@/components/sider';
 import AboutMe from '@/sections/aboutme';
 import Banner from '@/sections/banner';
 import Contact from '@/sections/contact';
@@ -6,7 +9,8 @@ import WorkHistory from '@/sections/workhistory';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen min-w-full flex-col prose'>
+    <main className='flex min-h-screen min-w-full flex-col prose relative'>
+      <Sider />
       <Banner />
       <AboutMe />
       <WorkHistory />

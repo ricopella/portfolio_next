@@ -64,7 +64,7 @@ const Job = (job: JobItem) => {
 
 export default function WorkHistory() {
   return (
-    <Section title='Work History'>
+    <Section title='Work History' id='WorkHistory'>
       <div className='mx-auto w-4/5 grid gap-8'>
         {HISTORY.map((job) => (
           <Job key={job.company} {...job} />

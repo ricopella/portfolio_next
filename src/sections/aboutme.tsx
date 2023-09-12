@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutMe() {
   return (
-    <Section title='About Me'>
+    <Section title='About Me' id='AboutMe'>
       <div className='mx-auto w-4/5 grid grid-cols-1 lg:grid-cols-3 lg:gap-8 h-full align-middle'>
         <div className='grid col-span-1 lg:col-span-1 justify-center'>
           <Image

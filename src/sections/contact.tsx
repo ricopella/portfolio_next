@@ -2,7 +2,7 @@ import Section from '@/components/section';
 
 export default function Contact() {
   return (
-    <Section title='Contact' fullScreen={false}>
+    <Section title='Contact' fullScreen={false} id='Contact'>
       <div className='mx-auto w-4/5 grid gap-6'>
         <p>
           Whether you&apos;re a company looking to add to your team, a business
