@@ -41,15 +41,15 @@ const Job = (job: JobItem) => {
   return (
     <div>
       <div
-        className='grid'
+        className='grid align-middle'
         style={{
           gridTemplateColumns: `1fr max-content`,
         }}
       >
-        <h3>{job.company}</h3>
+        <h3 className='w-max mt-0'>{job.company}</h3>
         <h5>{job.date}</h5>
       </div>
-      <h4 className='mb-4'>{job.title}</h4>
+      <h4 className='mb-4 mt-0'>{job.title}</h4>
       <p>{job.description}</p>
       {job.points && (
         <ol className='m-8 mb-0 list-disc'>

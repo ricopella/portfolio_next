@@ -9,20 +9,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      background: {
-        gradient: `var(--background-gradient)`,
-        main: 'var(background)',
-      },
       borderColor: {
         'extra-color': 'var(--extra-light-grey)',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  daisyui: {
+    themes: ['light', 'forest'],
+  },
 };
 export default config;
