@@ -20,7 +20,9 @@ export default function Section({
     >
       {title && (
         <div className='relative mx-auto w-4/5 row-span-1'>
-          <h1 className='text-3xl divider text-bold break-words'>{title}</h1>
+          <h1 className='text-3xl divider text-bold break-words tracking-widest italic'>
+            {title}
+          </h1>
         </div>
       )}
       <div className={`flex flex-col row-span-3 ${childStyles}`}>

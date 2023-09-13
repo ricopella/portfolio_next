@@ -1,5 +1,7 @@
+'use client';
+
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { useEffect } from 'react';
-import { useLocalStorage } from 'use-hooks';
 
 type Theme = 'forest' | 'garden';
 

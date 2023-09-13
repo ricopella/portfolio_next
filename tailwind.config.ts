@@ -8,6 +8,9 @@ const config: Config = {
     './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      sans: ['futura-pt', 'sans-serif'],
+    },
     extend: {
       borderColor: {
         'extra-color': 'var(--extra-light-grey)',
