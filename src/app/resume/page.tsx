@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const STYLES = {
   contactRowItem: {
     className: `grid px-4 gap-2 text-xs`,
@@ -415,17 +417,42 @@ const Experience = () => {
 
 export default function Resume() {
   return (
-    <main className='flex min-h-screen min-w-full flex-col prose relative'>
+    <main className='flex min-h-screen min-w-full flex-col prose relative bg-base-100'>
       <div
-        className='grid gap-4 grid-cols-1 py-4 my-24 mx-auto rounded-md drop-shadow-lg min-h-full'
+        className='grid gap-4 grid-cols-1 py-4 my-24 mx-auto rounded-md drop-shadow-lg min-h-full bg-base-200'
         style={{
           height: `297mm`,
           width: `210mm`,
-          backgroundColor: `rgb(55, 55, 55)`,
           gridTemplateRows: `10rem 1fr`,
         }}
       >
-        HEADER COMING SOON
+        <div className='grid relative w-full  grid-cols-4'>
+          <div className='col-span-1 grid align-middle justify-center'>
+            <Image
+              src='/images/nrs2.jpeg'
+              alt='Narin Rico Sundarabhaya'
+              width={140}
+              height={110}
+              className='rounded-md'
+            />
+          </div>
+          <div className='p-4 align-middle col-span-3 grid h-full justify-center'>
+            <div className='h-max  relative  justify-self-center'>
+              <h1 className='text-2xl mb-0  text-neutral-content'>
+                Narin Sundarabhaya
+              </h1>
+              <h2 className='text-sm my-0 text-neutral-content'>
+                Full-Stack Developer
+              </h2>
+              <p className='text-xs mb-0 text-neutral-content'>
+                Versatile Senior Software Engineer with a proven track record in
+                both corporate and freelance settings. Experienced in guiding
+                small businesses to market, securing funding through MVP
+                development.
+              </p>
+            </div>
+          </div>
+        </div>
         <div
           className='grid gap-4 overflow-hidden'
           style={{
