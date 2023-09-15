@@ -123,7 +123,7 @@ export default function Experience() {
           <div {...STYLES.experienceFirstTitleRow}>
             <div {...STYLES.experienceFirstTitle}>Teacher Assistant</div>
             <a
-              href='https://fan.ai'
+              href='https://bootcamp.uclaextension.edu/coding/'
               target='_blank'
               rel='noopener noreferrer'
               {...STYLES.experienceTitleLink}
@@ -135,7 +135,7 @@ export default function Experience() {
           <div {...STYLES.experienceFirstTitleRow}>
             <div {...STYLES.experienceFirstTitle}>Sr. Client Manager</div>
             <a
-              href='https://fan.ai'
+              href='https://www.kforce.com/'
               target='_blank'
               rel='noopener noreferrer'
               {...STYLES.experienceTitleLink}
@@ -149,7 +149,7 @@ export default function Experience() {
               Vice President, Sales & Project Management
             </div>
             <a
-              href='https://fan.ai'
+              href='https://www.pseagency.com/'
               target='_blank'
               rel='noopener noreferrer'
               {...STYLES.experienceTitleLink}
