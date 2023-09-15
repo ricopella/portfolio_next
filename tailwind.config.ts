@@ -15,6 +15,20 @@ const config: Config = {
       borderColor: {
         'extra-color': 'var(--extra-light-grey)',
       },
+      height: {
+        resumeDesktop: `297mm`,
+      },
+      gridTemplateColumns: {
+        resumeBodyDesktop: `13.5rem 1fr`,
+        'max-max-1fr': 'max-content max-content 1fr',
+      },
+      width: {
+        resumeSmall: 'calc(100vw - 2rem)',
+        resumeDesktop: `210mm`,
+      },
+      screens: {
+        resume: '53.125rem',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
