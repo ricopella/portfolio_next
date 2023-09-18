@@ -3,8 +3,13 @@ import Image from 'next/image';
 
 export default function AboutMe() {
   return (
-    <Section title='About Me' id='AboutMe'>
-      <div className='mx-auto w-4/5 grid grid-cols-1 lg:grid-cols-3 lg:gap-8 h-full align-middle'>
+    <Section
+      title='About Me'
+      id='AboutMe'
+      sectionStyles='bg-base-200'
+      fullScreen={false}
+    >
+      <div className='mx-auto w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 h-full align-middle'>
         <div className='grid col-span-1 lg:col-span-1 justify-center'>
           <Image
             src='/images/nrs.jpg'
@@ -14,7 +19,7 @@ export default function AboutMe() {
           />
         </div>
 
-        <div className='col-span-1 lg:col-span-2'>
+        <div className='grid gap-4 col-span-1 lg:col-span-2'>
           <p>
             {`Navigating the vibrant worlds of web development and design, I specialize in crafting digital experiences that drive results. From elevating brand presence with sleek online storefronts to architecting data-driven platforms for businesses, my work prioritizes functionality without sacrificing aesthetics. While I often lean on React for its dynamic capabilities, my toolset is always evolving to remain on the cutting edge.`}
           </p>

@@ -1,8 +1,28 @@
+'use client';
+
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import SwitchTheme from './themeSwitcher';
 
 export default function Sider() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleAnchorClick = async (section: string) => {
+    // If not on the home page, navigate there first
+    if (pathname !== '/') {
+      router.push('/');
+    }
+
+    // Find the element and scroll to it
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className='drawer absolute'>
+    <div className='drawer absolute z-50'>
       <input
         id='my-drawer'
         type='checkbox'
@@ -43,13 +63,19 @@ export default function Sider() {
         <ul className='menu p-4 w-80 min-h-full bg-secondary-content text-base-content m-0'>
           <SwitchTheme />
           <li>
-            <a href='#AboutMe'>About Me</a>
+            <a onClick={() => handleAnchorClick('Home')}>Home</a>
           </li>
           <li>
-            <a href='#WorkHistory'>Work History</a>
+            <a onClick={() => handleAnchorClick('AboutMe')}>About Me</a>
           </li>
           <li>
-            <a href='#Contact'>Contact</a>
+            <a onClick={() => handleAnchorClick('WorkHistory')}>Work History</a>
+          </li>
+          <li>
+            <a onClick={() => handleAnchorClick('Contact')}>Contact</a>
+          </li>
+          <li>
+            <Link href='/resume'>Resume</Link>
           </li>
         </ul>
       </div>

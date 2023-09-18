@@ -18,7 +18,7 @@ export default function Experience() {
             </a>
             <i {...STYLES.experienceFirstTitleDate}>2017 - Present</i>
           </div>
-          <ul {...STYLES.experienceUl}>
+          <ol {...STYLES.experienceUl}>
             <li>
               Video Chat Application: Developed a Twilio-based video chat MVP
               hosted on Vercel, aiding a client in securing initial funding.
@@ -42,7 +42,7 @@ export default function Experience() {
               like Wix, embedding features such as custom calendars and
               automated booking services.
             </li>
-          </ul>
+          </ol>
         </div>
         <div>
           <div {...STYLES.experienceFirstTitleRow}>
@@ -57,7 +57,7 @@ export default function Experience() {
             </a>
             <i {...STYLES.experienceFirstTitleDate}>June 2020 - Sept 2023</i>
           </div>
-          <ul {...STYLES.experienceUl}>
+          <ol {...STYLES.experienceUl}>
             <li>
               Innovative Features: Added integration with OpenAI for specialized
               features, like AI-assisted SQL syntax error correction &
@@ -83,7 +83,7 @@ export default function Experience() {
               tracking of page views, user segmentation, and event activities.
             </li>
             <li>Promoted from Software Engineer II to III in 2021.</li>
-          </ul>
+          </ol>
         </div>
 
         <div>
@@ -99,7 +99,7 @@ export default function Experience() {
             </a>
             <i {...STYLES.experienceFirstTitleDate}>Dec 2017 - June 2020</i>
           </div>
-          <ul {...STYLES.experienceUl}>
+          <ol {...STYLES.experienceUl}>
             <li>
               Created data visualizations and dashboards built with Redux &
               Highcharts. Examples: social following & interactions (twitter &
@@ -116,7 +116,7 @@ export default function Experience() {
               caching.
             </li>
             <li>Promoted from Frontend Developer I to II in 2019.</li>
-          </ul>
+          </ol>
         </div>
 
         <div>
@@ -145,9 +145,7 @@ export default function Experience() {
             <i {...STYLES.experienceFirstTitleDate}>Aug 2015 - Oct 2017</i>
           </div>
           <div {...STYLES.experienceFirstTitleRow}>
-            <div {...STYLES.experienceFirstTitle}>
-              Vice President, Sales & Project Management
-            </div>
+            <div {...STYLES.experienceFirstTitle}>Vice President, Sales</div>
             <a
               href='https://www.pseagency.com/'
               target='_blank'

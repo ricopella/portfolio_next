@@ -40,12 +40,7 @@ const HISTORY: JobItem[] = [
 const Job = (job: JobItem) => {
   return (
     <div>
-      <div
-        className='grid align-middle'
-        style={{
-          gridTemplateColumns: `1fr max-content`,
-        }}
-      >
+      <div className='grid align-middle md:grid-cols-1fr-mx'>
         <h3 className='w-max mt-0'>{job.company}</h3>
         <h5>{job.date}</h5>
       </div>

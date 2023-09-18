@@ -21,6 +21,8 @@ const config: Config = {
       gridTemplateColumns: {
         resumeBodyDesktop: `13.5rem 1fr`,
         'max-max-1fr': 'max-content max-content 1fr',
+        'max-3': `repeat(3, max-content)`,
+        '1fr-mx': `1fr max-content`,
       },
       width: {
         resumeSmall: 'calc(100vw - 2rem)',

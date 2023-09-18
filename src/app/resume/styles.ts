@@ -58,7 +58,7 @@ const styles = {
     className: 'md:justify-self-end text-xs',
   },
   experienceUl: {
-    className: 'ps-3 text-xs',
+    className: 'ps-3 text-xs list-disc',
   },
 };
 

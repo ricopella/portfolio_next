@@ -4,30 +4,30 @@ export default function Section({
   childStyles,
   fullScreen = true,
   id,
+  sectionStyles,
 }: {
   children: React.ReactNode;
   title?: string;
   childStyles?: string;
   fullScreen?: boolean;
   id: string;
+  sectionStyles?: string;
 }) {
   return (
     <section
-      className={`grid items-center justify-center ${
+      className={`grid items-center justify-center overflow-hidden ${
         fullScreen ? 'min-h-screen' : ''
-      } grid-rows-4`}
+      } py-10 ${sectionStyles ?? ''}`}
       id={id}
     >
       {title && (
-        <div className='relative mx-auto w-4/5 row-span-1'>
-          <h1 className='text-3xl divider text-bold break-words tracking-widest italic'>
+        <div className='relative mx-auto md:w-4/5 row-span-1'>
+          <h1 className='text-2xl sm:text-3xl md:divider text-bold overflow-wrap break-words whitespace-normal text-center tracking-widest italic'>
             {title}
           </h1>
         </div>
       )}
-      <div className={`flex flex-col row-span-3 ${childStyles}`}>
-        {children}
-      </div>
+      <div className={`flex flex-col${childStyles ?? ''}`}>{children}</div>
     </section>
   );
 }
