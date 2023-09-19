@@ -15,7 +15,7 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer className='footer-center p-10  text-neutral-content bg-base-200 '>
+    <footer className='footer-center p-10 bg-base-200 '>
       <nav className='mb-4'>
         <div className='grid grid-flow-col gap-4'>
           {LINKS.map((link) => (
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
       </nav>
 
-      <aside className='text-neutral-content'>
+      <aside className='text-accent'>
         &copy; {new Date().getFullYear()}, <span>Narin Rico Sundarabhaya</span>
       </aside>
     </footer>

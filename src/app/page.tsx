@@ -3,7 +3,7 @@ import AboutMe from '@/sections/aboutme';
 import Banner from '@/sections/banner';
 import Contact from '@/sections/contact';
 import Expertise from '@/sections/expertise';
-import WorkHistory from '@/sections/workhistory';
+import Timeline from '../sections/timelines';
 
 export default function Home() {
   return (
@@ -12,7 +12,8 @@ export default function Home() {
       <Banner />
       <Expertise />
       <AboutMe />
-      <WorkHistory />
+      {/* <WorkHistory /> */}
+      <Timeline />
       <Contact />
     </>
   );

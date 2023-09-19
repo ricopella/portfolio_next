@@ -17,7 +17,7 @@ export default function Banner() {
         <h1 className='text-3xl sm:text-5xl font-bold break-words mb-0 tracking-widest italic text-neutral-content'>
           Sundarabhaya
         </h1>
-        <h2 className='sm:text-2xl mt-0 tracking-widest italic text-neutral-content'>
+        <h2 className='sm:text-2xl mt-0 tracking-widest italic text-primary'>
           Your Architect for the Digital World
         </h2>
       </div>

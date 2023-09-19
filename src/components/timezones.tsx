@@ -23,14 +23,14 @@ export default function Timezones() {
     }
   }, []);
   return (
-    <div className='absolute left-1/2 top-0 transform -translate-x-1/2 grid-cols-max-3 align-middle justify-center w-4/5 text-neutral-content mr-1 hidden md:grid'>
+    <div className='absolute left-1/2 top-0 transform -translate-x-1/2 grid-cols-max-3 align-middle justify-center w-4/5 text-neutral-content mr-1 hidden md:grid text-sm italic opacity-60'>
       {timezone && (
-        <div className='after:content-["__|_"] '>
+        <div className='after:content-["__|__"] '>
           {timezone ?? 'Current'}:
           <Clock format={'HH:mm'} ticking={true} />
         </div>
       )}
-      <div className='mx-1 after:content-["__|_"]'>
+      <div className='mx-1 after:content-["__|__"]'>
         Los Angeles:{' '}
         <Clock format={'HH:mm'} ticking={true} timezone={'US/Pacific'} />
       </div>

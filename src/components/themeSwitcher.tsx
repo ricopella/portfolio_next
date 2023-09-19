@@ -3,13 +3,13 @@
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { useEffect } from 'react';
 
-type Theme = 'forest' | 'garden';
+type Theme = 'forest' | 'emerald';
 
 const SwitchTheme = () => {
   const [theme, setTheme] = useLocalStorage<Theme>('theme', 'forest');
 
   const toggleTheme = () => {
-    setTheme(theme === 'forest' ? 'garden' : 'forest');
+    setTheme(theme === 'forest' ? 'emerald' : 'forest');
   };
 
   useEffect(() => {

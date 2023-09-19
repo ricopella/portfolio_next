@@ -35,7 +35,7 @@ const config: Config = {
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
   daisyui: {
-    themes: ['garden', 'forest'],
+    themes: ['emerald', 'forest'],
   },
 };
 export default config;
