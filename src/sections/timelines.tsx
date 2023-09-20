@@ -195,12 +195,17 @@ handled, making the web app more responsive and user-friendly.`,
 
 export default function Timeline() {
   return (
-    <Section title='Case Studies' id='CaseStudies' fullScreen={false}>
+    <Section
+      title='Case Studies'
+      id='CaseStudies'
+      fullScreen={false}
+      sectionStyles='bg-base-300'
+    >
       <VerticalTimeline lineColor='hsl(var(--p))'>
         {TIMELINE.map((item) => (
           <VerticalTimelineElement
             className='vertical-timeline-element--work'
-            textClassName='!bg-base-200 !shadow-lg'
+            textClassName='!bg-base-100 !shadow-lg'
             contentArrowStyle={{ borderRight: '7px solid hsl(var(--p))' }}
             date={item.date}
             iconStyle={{ background: 'hsl(var(--p))' }}

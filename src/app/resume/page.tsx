@@ -9,10 +9,9 @@ import Skills from './skills';
 export default function Resume() {
   return (
     <div
-      className='grid gap-4 grid-cols-1 py-4 my-24 mx-auto rounded-md drop-shadow-lg bg-base-200 lg:w-resumeDesktop lg:h-resumeDesktop w-resumeSmall h-full prose'
+      className='prose grid gap-4 grid-cols-1 py-4 my-24 mx-auto rounded-md drop-shadow-lg bg-base-200 lg:w-resumeDesktop lg:max-w-resumeDesktop lg:h-resumeDesktop w-resumeSmall max-w-resumeSmall h-full'
       style={{
         gridTemplateRows: `10rem 1fr`,
-        maxWidth: `210mm !important`, // fix prose max-width
       }}
     >
       <div className='grid relative w-full  sm:grid-cols-4 grid-cols-1'>
@@ -42,12 +41,7 @@ export default function Resume() {
           </div>
         </div>
       </div>
-      <div
-        className='grid gap-4 overflow-hidden   md:grid-cols-resumeBodyDesktop'
-        style={{
-          gridTemplateRows: `repeat(2, max-content)`,
-        }}
-      >
+      <div className='grid gap-4 overflow-hidden md:grid-cols-resumeBodyDesktop grid-rows-max-2'>
         <div>
           <Contact />
           <Skills />

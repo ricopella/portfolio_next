@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 type Theme = 'forest' | 'emerald';
 
 const SwitchTheme = () => {
-  const [theme, setTheme] = useLocalStorage<Theme>('theme', 'forest');
+  const [theme, setTheme] = useLocalStorage<Theme>('theme', 'emerald');
 
   const toggleTheme = () => {
     setTheme(theme === 'forest' ? 'emerald' : 'forest');

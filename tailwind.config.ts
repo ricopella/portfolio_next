@@ -24,6 +24,13 @@ const config: Config = {
         'max-3': `repeat(3, max-content)`,
         '1fr-mx': `1fr max-content`,
       },
+      gridTemplateRows: {
+        'max-2': `repeat(2, max-content)`,
+      },
+      maxWidth: {
+        resumeSmall: 'calc(100vw - 2rem)',
+        resumeDesktop: `210mm`,
+      },
       width: {
         resumeSmall: 'calc(100vw - 2rem)',
         resumeDesktop: `210mm`,

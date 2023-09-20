@@ -12,7 +12,6 @@ export default function Home() {
       <Banner />
       <Expertise />
       <AboutMe />
-      {/* <WorkHistory /> */}
       <Timeline />
       <Contact />
     </>
