@@ -15,12 +15,12 @@ export default function Timezones() {
   return (
     <div {...STYLES.container}>
       {timezone && (
-        <div>
+        <div className="after:content-['_|_'] after:ml-4">
           {timezone ?? 'Current'}:
           <Clock format={'HH:mm'} ticking={true} />
         </div>
       )}
-      <div>
+      <div className="after:content-['_|_'] after:ml-4">
         Los Angeles:{' '}
         <Clock format={'HH:mm'} ticking={true} timezone={'US/Pacific'} />
       </div>

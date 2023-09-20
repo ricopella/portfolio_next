@@ -1,6 +1,7 @@
 'use client';
 
 import Section from '@/components/section';
+import Image from 'next/image';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -13,6 +14,8 @@ const TIMELINE = [
     title: 'Alpha.io',
     subtitle: 'Web Application',
     tags: ['React', 'TypeScript', 'NodeJS'],
+    imgSrc: '/images/data.svg',
+    imgAlt: 'Data Analytics Case Study',
     description: [
       `The Problem: Alpha io began by developing features that were
   suited to unique customer demands, which quickly became
@@ -33,7 +36,7 @@ const TIMELINE = [
       `The Why: The universal data model was developed to address
   scalability concerns and to deliver a more streamlined user
   experience. We boosted efficiency while also offering a level
-  of customisation that set us apart from competitors by
+  of customization that set us apart from competitors by
   allowing easy data linkages from different sources. The
   "applications" feature was created as a natural expansion to
   give consumers greater control, further increasing the
@@ -43,7 +46,9 @@ const TIMELINE = [
   {
     date: '2022',
     title: 'Twilio-based Video Chat MVP for a Startup',
-    subtitle: 'NextJS Web App',
+    subtitle: 'NextJS Web Application',
+    imgSrc: '/images/web.svg',
+    imgAlt: 'Web App Case Study',
     tags: ['React', 'TypeScript', 'NextJS'],
     description: [
       `The Problem: The founder of a business wanted to acquire first-round
@@ -69,7 +74,9 @@ trade-offs made throughout development.`,
   {
     date: `2021`,
     title: `3D Web Application Redesign for Architectural Tool`,
-    subtitle: `Web App`,
+    subtitle: `Web Application`,
+    imgSrc: '/images/web.svg',
+    imgAlt: 'Web App Case Study',
     tags: [`React`, `TypeScript`, `CSS`],
     description: [
       `The Problem: The startup team behind a 3D architectural tool was set
@@ -98,6 +105,8 @@ indicating the project's market readiness and feasibility.`,
     date: `2021`,
     title: `E-commerce Development for Skincare Brand`,
     subtitle: `Shopify`,
+    imgSrc: '/images/store.svg',
+    imgAlt: 'ECommerce Case Study',
     tags: [`Shopify`, `CSS`, `Ecommerce`],
     description: [
       `The Problem: The client, an aspiring skincare entrepreneur, wanted
@@ -122,6 +131,8 @@ indicating the project's market readiness and feasibility.`,
     date: `2019`,
     title: `E-commerce Development for Home Decor Brand`,
     subtitle: `Shopify`,
+    imgSrc: '/images/store.svg',
+    imgAlt: 'ECommerce Case Study',
     tags: [`Shopify`, `CSS`, `Ecommerce`],
     description: [
       `The Problem: The customer, another entrepreneur focused on the home
@@ -143,7 +154,9 @@ indicating the project's market readiness and feasibility.`,
   {
     date: `2017 - 2020`,
     title: `FanAI Inc.`,
-    subtitle: `Web App`,
+    subtitle: `Web Application`,
+    imgSrc: '/images/data.svg',
+    imgAlt: 'Data & Visualization Case Study',
     tags: [`React`, `TypeScript`, `NodeJS`],
     description: [
       `The Problem: The customer ran an online retail business, offering
@@ -169,7 +182,9 @@ handled, making the web app more responsive and user-friendly.`,
     date: `2017`,
     title: `API Development & Integration for Multi-Platform Inventory Management`,
     subtitle: `NodeJS API`,
-    tags: [`NodeJS`, `API`],
+    imgSrc: '/images/api.svg',
+    imgAlt: 'API Case Study',
+    tags: [`NodeJS`, `API`, `Ecommerce`],
     description: [
       `The Problem: The Solution: As Scrum master and developer, I oversaw
       a team of six engineers in the development of an API service
@@ -208,18 +223,27 @@ export default function Timeline() {
             textClassName='!bg-base-100 !shadow-lg'
             contentArrowStyle={{ borderRight: '7px solid hsl(var(--p))' }}
             date={item.date}
-            iconStyle={{ background: 'hsl(var(--p))' }}
+            // iconStyle={{ background: 'hsl(var(--p))' }}
+            iconClassName='bg-neutral flex items-center justify-center'
+            icon={
+              <Image
+                src={item.imgSrc}
+                width={40}
+                height={40}
+                alt={item.imgAlt}
+              />
+            }
             key={item.title}
           >
             <details className='collapse grid gap-4'>
               <summary className='collapse-title text-xl font-medium '>
-                <h3 className='vertical-timeline-element-title text-xl'>
+                <h3 className='vertical-timeline-element-title lg:text-xl text-md'>
                   {item.title}
                 </h3>
                 <h4 className='vertical-timeline-element-subtitle text-sm'>
                   {item.subtitle}
                 </h4>
-                <div className='grid grid-cols-max-3 gap-2 mt-4'>
+                <div className='grid md:grid-cols-max-3 gap-2 mt-4'>
                   {item.tags.map((tag) => (
                     <div className='badge badge-primary' key={tag}>
                       {tag}

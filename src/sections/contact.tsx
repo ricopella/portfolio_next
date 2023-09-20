@@ -8,7 +8,7 @@ export default function Contact() {
       id='Contact'
       sectionStyles='bg-base-200'
     >
-      <div className='mx-auto w-4/5 grid gap-6'>
+      <div className='mx-auto w-4/5 grid gap-6 mt-4'>
         <p>
           Whether you&apos;re a company looking to add to your team, a business
           owner looking to build an app or website with a freelance web
