@@ -4,6 +4,31 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import SwitchTheme from './themeSwitcher';
 
+const STYLES = {
+  drawer: {
+    className: `drawer absolute z-50`,
+  },
+  drawerToggle: {
+    className: `drawer-toggle absolute`,
+  },
+  drawerContent: {
+    className: `drawer-content`,
+  },
+  drawerButton: {
+    className: `btn btn-ghost btn-circle  swap swap-rotate fixed top-4 left-4`,
+  },
+  drawerButtonIcon: `fill-primary`,
+  drawerSide: {
+    className: `drawer-side`,
+  },
+  drawerSideOverlay: {
+    className: `drawer-overlay`,
+  },
+  drawerUl: {
+    className: `menu p-4 w-80 min-h-full bg-secondary-content text-base-content m-0`,
+  },
+};
+
 export default function Sider() {
   const pathname = usePathname();
   const router = useRouter();
@@ -22,22 +47,15 @@ export default function Sider() {
   };
 
   return (
-    <div className='drawer absolute z-50'>
-      <input
-        id='my-drawer'
-        type='checkbox'
-        className='drawer-toggle absolute'
-      />
-      <div className='drawer-content'>
-        <label
-          htmlFor='my-drawer'
-          className='btn btn-ghost btn-circle  swap swap-rotate absolute top-4 left-4 '
-        >
+    <div {...STYLES.drawer}>
+      <input id='my-drawer' type='checkbox' {...STYLES.drawerToggle} />
+      <div {...STYLES.drawerContent}>
+        <label htmlFor='my-drawer' {...STYLES.drawerButton}>
           <input type='checkbox' />
 
           {/* hamburger icon */}
           <svg
-            className='swap-off fill-current'
+            className={`${STYLES.drawerButtonIcon} swap-off`}
             xmlns='http://www.w3.org/2000/svg'
             width='32'
             height='32'
@@ -48,7 +66,7 @@ export default function Sider() {
 
           {/* close icon */}
           <svg
-            className='swap-on fill-current'
+            className={`${STYLES.drawerButtonIcon} swap-on`}
             xmlns='http://www.w3.org/2000/svg'
             width='32'
             height='32'
@@ -58,9 +76,11 @@ export default function Sider() {
           </svg>
         </label>
       </div>
-      <div className='drawer-side'>
-        <label htmlFor='my-drawer' className='drawer-overlay'></label>
-        <ul className='menu p-4 w-80 min-h-full bg-secondary-content text-base-content m-0'>
+      <div {...STYLES.drawerSide}>
+        <label htmlFor='my-drawer' {...STYLES.drawerSideOverlay} />
+        <input id='my-drawer' type='checkbox' {...STYLES.drawerToggle} />
+
+        <ul {...STYLES.drawerUl}>
           <SwitchTheme />
           <li>
             <a onClick={() => handleAnchorClick('Home')}>Home</a>
@@ -69,7 +89,7 @@ export default function Sider() {
             <a onClick={() => handleAnchorClick('AboutMe')}>About Me</a>
           </li>
           <li>
-            <a onClick={() => handleAnchorClick('WorkHistory')}>Work History</a>
+            <a onClick={() => handleAnchorClick('CaseStudies')}>Case Studies</a>
           </li>
           <li>
             <a onClick={() => handleAnchorClick('Contact')}>Contact</a>

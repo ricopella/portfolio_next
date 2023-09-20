@@ -12,16 +12,16 @@ const styles = {
     className: `my-0 justify-self-end`,
   },
   infoColumnContainer: {
-    className: `lg:border-r-2 border-secondary`,
+    className: `lg:border-r-2 border-primary`,
   },
   infoColumnHeading: {
-    className: `bg-secondary h-8 w-5/6 pl-4 leading-8`,
+    className: `bg-primary h-8 w-5/6 pl-4 leading-8`,
   },
   skillsContainer: {
     className: `grid grid-row-auto p-4 pb-0 gap-1`,
   },
   skillRow: {
-    className: `grid gap-2 border-b-2 border-secondary`,
+    className: `grid gap-2 border-b-2 border-primary`,
     style: {
       gridTemplateColumns: `1fr max-content`,
     },
@@ -40,7 +40,7 @@ const styles = {
   },
   experienceHeading: {
     className:
-      'pt-2 text-2xl border-b-2 border-solid border-secondary h-8 w-full capitalize leading-3',
+      'pt-2 text-2xl border-b-2 border-solid border-primary h-8 w-full capitalize leading-3',
   },
   experienceContainer: {
     className: 'grid',
@@ -59,6 +59,21 @@ const styles = {
   },
   experienceUl: {
     className: 'ps-3 text-xs list-disc',
+  },
+  educationBody: {
+    className: 'grid px-4',
+  },
+  educationItem: {
+    className: 'grid',
+  },
+  educationTitle: {
+    className: `font-bold border-b-2 border-solid border-primary mt-0`,
+  },
+  educationType: {
+    className: 'text-sm mb-0',
+  },
+  educationYear: {
+    className: 'text-xs',
   },
 };
 

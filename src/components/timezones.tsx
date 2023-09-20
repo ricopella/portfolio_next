@@ -1,40 +1,30 @@
 'use client';
-import { useEffect, useState } from 'react';
+
+import useTimezone from '@/hooks/useTimezone';
 import Clock from 'react-live-clock';
 
+const STYLES = {
+  container: {
+    className: `absolute left-1/2 top-0 transform -translate-x-1/2 grid-cols-max-3 align-middle justify-center w-4/5 text-neutral-content mr-1 hidden md:grid text-sm italic opacity-60 gap-4`,
+  },
+};
+
 export default function Timezones() {
-  const [timezone, setTimezone] = useState<null | string>(null);
+  const timezone = useTimezone();
 
-  useEffect(() => {
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-    const parts = tz.split('/');
-
-    if (parts.length > 1) {
-      const zoneCity = parts[1];
-
-      if (zoneCity !== 'Pacific' && zoneCity !== 'Bangkok') {
-        setTimezone(zoneCity);
-      } else {
-        setTimezone(null);
-      }
-    } else {
-      setTimezone('Current');
-    }
-  }, []);
   return (
-    <div className='absolute left-1/2 top-0 transform -translate-x-1/2 grid-cols-max-3 align-middle justify-center w-4/5 text-neutral-content mr-1 hidden md:grid'>
+    <div {...STYLES.container}>
       {timezone && (
-        <div className='after:content-["__|_"] '>
+        <div className="after:content-['_|_'] after:ml-4">
           {timezone ?? 'Current'}:
           <Clock format={'HH:mm'} ticking={true} />
         </div>
       )}
-      <div className='mx-1 after:content-["__|_"]'>
+      <div className="after:content-['_|_'] after:ml-4">
         Los Angeles:{' '}
         <Clock format={'HH:mm'} ticking={true} timezone={'US/Pacific'} />
       </div>
-      <div className='ml-1'>
+      <div>
         Bangkok:{' '}
         <Clock format={'HH:mm'} ticking={true} timezone={'ASIA/Bangkok'} />
       </div>
