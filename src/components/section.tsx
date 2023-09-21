@@ -1,3 +1,5 @@
+import Animated from './animated';
+
 export default function Section({
   children,
   title,
@@ -27,7 +29,9 @@ export default function Section({
           </h1>
         </div>
       )}
-      <div className={`flex flex-col${childStyles ?? ''}`}>{children}</div>
+      <Animated className={`flex flex-col${childStyles ?? ''}`} key={id}>
+        {children}
+      </Animated>
     </section>
   );
 }

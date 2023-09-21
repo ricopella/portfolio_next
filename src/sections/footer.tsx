@@ -15,7 +15,7 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer className='footer-center p-10 bg-base-200'>
+    <footer className='footer-center p-10 pb-2 bg-base-200'>
       <nav className='mb-4'>
         <div className='grid grid-flow-col gap-4'>
           {LINKS.map((link) => (

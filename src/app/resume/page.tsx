@@ -1,5 +1,6 @@
 'use client';
 
+import Animated from '@/components/animated';
 import Image from 'next/image';
 import Contact from './contact';
 import Education from './education';
@@ -9,12 +10,15 @@ import Skills from './skills';
 export default function Resume() {
   return (
     <div
-      className='prose grid gap-4 grid-cols-1 py-4 my-24 mx-auto rounded-md drop-shadow-lg bg-base-200 lg:w-resumeDesktop lg:max-w-resumeDesktop lg:h-resumeDesktop w-resumeSmall max-w-resumeSmall h-full'
+      className='prose grid gap-4 grid-cols-1 py-4 my-24 mx-auto rounded-md drop-shadow-lg bg-base-200 lg:w-resumeDesktop lg:max-w-resumeDesktop lg:h-resumeDesktop w-resumeSmall max-w-resumeSmall'
       style={{
-        gridTemplateRows: `10rem 1fr`,
+        gridTemplateRows: `8rem 1fr`,
       }}
     >
-      <div className='grid relative w-full  sm:grid-cols-4 grid-cols-1'>
+      <Animated
+        key='resume'
+        className='grid relative w-full  sm:grid-cols-4 grid-cols-1'
+      >
         <div className='col-span-1 align-middle justify-center hidden md:grid'>
           <Image
             src='/images/nrs2.jpeg'
@@ -40,7 +44,7 @@ export default function Resume() {
             </p>
           </div>
         </div>
-      </div>
+      </Animated>
       <div className='grid gap-4 overflow-hidden md:grid-cols-resumeBodyDesktop grid-rows-max-2'>
         <div>
           <Contact />
