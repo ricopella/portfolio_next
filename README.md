@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio v4
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Personal portfolio website, created from the NextJS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Live version can be viewed at [narinsun.com](narinsun.com)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+My portfolio has changed throughout time, with each edition reflecting a step forward in my professional progress. The first iteration was made with Vanilla JS, and the second iteration used the same design but was rebuilt with Gatsby and React. I chose to redo everything for the third edition. I used Gatsby but added TypeScript and Framer-Motion for more dynamic animations. This version was especially satisfying because I chose to forsake pre-made component libraries in favor of building everything from scratch. This technique dramatically improved my component composition and StyledComponents skills, as well as the introduction of unit testing.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Version 4, another total rewrite. This time, I've shifted to NextJS for better performance and SEO. I used Tailwind and DaisyUI for the UI, keeping framer-motion for smooth and eye-catching animations.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech Stack
 
-## Learn More
+Built With: [TypeScript](https://www.typescriptlang.org/), [NextJS](https://nextjs.org/), [React](https://reactjs.org/), [Tailwind](https://tailwindcss.com/), [Framer-Motion](https://www.framer.com/motion/), hosted with [Vercel](https://vercel.com/)
 
-To learn more about Next.js, take a look at the following resources:
+## More Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [LinkedIn](https://www.linkedin.com/in/nsundara/)
+- [Codepen](https://codepen.io/Ricopella/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## History
 
-## Deploy on Vercel
+- Last Updated: 9/21/23
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Created: 9/21/23
