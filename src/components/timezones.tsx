@@ -5,7 +5,7 @@ import Clock from 'react-live-clock';
 
 const STYLES = {
   container: {
-    className: `absolute left-1/2 top-0 transform -translate-x-1/2 grid-cols-max-3 align-middle justify-center w-4/5 text-neutral-content mr-1 hidden md:grid text-sm italic opacity-60 gap-4`,
+    className: `absolute left-1/2 top-0 transform -translate-x-1/2 grid-cols-max-3 align-middle justify-center w-4/5 text-neutral-content mr-1 hidden md:grid text-sm italic opacity-60 gap-5`,
   },
 };
 

@@ -208,6 +208,18 @@ handled, making the web app more responsive and user-friendly.`,
   },
 ];
 
+const STYLES = {
+  collapseContent: `collapse-content`,
+  detail: `collapse grid gap-4`,
+  icon: `bg-neutral flex items-center justify-center`,
+  summary: `collapse-title text-xl font-medium`,
+  summarySubtitle: `vertical-timeline-element-subtitle text-sm`,
+  summaryTitle: `vertical-timeline-element-title lg:text-xl text-md`,
+  tagsContainer: `grid md:grid-cols-max-3 gap-2 mt-4`,
+  timelineItem: `vertical-timeline-element--work`,
+  timeLineText: `!bg-base-100 !shadow-lg`,
+};
+
 export default function Timeline() {
   return (
     <Section
@@ -219,12 +231,11 @@ export default function Timeline() {
       <VerticalTimeline lineColor='hsl(var(--p))'>
         {TIMELINE.map((item) => (
           <VerticalTimelineElement
-            className='vertical-timeline-element--work'
-            textClassName='!bg-base-100 !shadow-lg'
+            className={STYLES.timelineItem}
+            textClassName={STYLES.timeLineText}
             contentArrowStyle={{ borderRight: '7px solid hsl(var(--p))' }}
             date={item.date}
-            // iconStyle={{ background: 'hsl(var(--p))' }}
-            iconClassName='bg-neutral flex items-center justify-center'
+            iconClassName={STYLES.icon}
             icon={
               <Image
                 src={item.imgSrc}
@@ -235,15 +246,11 @@ export default function Timeline() {
             }
             key={item.title}
           >
-            <details className='collapse grid gap-4'>
-              <summary className='collapse-title text-xl font-medium '>
-                <h3 className='vertical-timeline-element-title lg:text-xl text-md'>
-                  {item.title}
-                </h3>
-                <h4 className='vertical-timeline-element-subtitle text-sm'>
-                  {item.subtitle}
-                </h4>
-                <div className='grid md:grid-cols-max-3 gap-2 mt-4'>
+            <details className={STYLES.detail}>
+              <summary className={STYLES.summary}>
+                <h3 className={STYLES.summaryTitle}>{item.title}</h3>
+                <h4 className={STYLES.summarySubtitle}>{item.subtitle}</h4>
+                <div className={STYLES.tagsContainer}>
                   {item.tags.map((tag) => (
                     <div className='badge badge-primary' key={tag}>
                       {tag}
@@ -251,7 +258,7 @@ export default function Timeline() {
                   ))}
                 </div>
               </summary>
-              <div className='collapse-content'>
+              <div className={STYLES.collapseContent}>
                 {item.description.map((desc, i) => (
                   <p key={i} className='normal-case !text-sm'>
                     {desc}

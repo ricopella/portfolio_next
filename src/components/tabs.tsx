@@ -4,6 +4,7 @@ const style = {
   notSelected: `border-b text-sm`,
   selected: `text-gray-700 text-sm border-b-2 border-indigo-700 `,
   default: `-mb-2 px-4 md:px-8 py-4 md:py-1 inline-block focus:outline-none`,
+  tab: `mt-4`,
 };
 
 export function Tabs({ children }: { children: React.ReactNode[] }) {
@@ -41,7 +42,7 @@ export function Tab({
   selected: boolean;
 }) {
   return (
-    <div hidden={!selected} className='mt-4'>
+    <div hidden={!selected} className={style.tab}>
       {children}
     </div>
   );

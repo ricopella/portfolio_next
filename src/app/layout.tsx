@@ -22,7 +22,7 @@ export default function RootLayout({
       <link rel='icon' href='/favicon.ico' sizes='any' />
       <Analytics />
       <body className={inter.className} data-theme='forest'>
-        <main className='h-full max-w-screen grid w-full  relative font-sans uppercase'>
+        <main className='max-w-screen grid w-full h-full relative font-sans uppercase'>
           <Sider />
           {children}
           <Footer />

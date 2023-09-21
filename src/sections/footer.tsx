@@ -13,24 +13,28 @@ const LINKS = [
   },
 ];
 
+const STYLES = {
+  aside: `text-accent text-xs`,
+  footer: `footer-center p-10 pb-2 bg-base-200`,
+  link: `link link-primary no-underline`,
+  nav: `mb-4`,
+  row: `grid grid-flow-col gap-4`,
+};
+
 export default function Footer() {
   return (
-    <footer className='footer-center p-10 bg-base-200'>
-      <nav className='mb-4'>
-        <div className='grid grid-flow-col gap-4'>
+    <footer className={STYLES.footer}>
+      <nav className={STYLES.nav}>
+        <div className={STYLES.row}>
           {LINKS.map((link) => (
-            <a
-              key={link.name}
-              href={link.url}
-              className='link link-primary no-underline'
-            >
+            <a key={link.name} href={link.url} className={STYLES.link}>
               + {link.name} +
             </a>
           ))}
         </div>
       </nav>
 
-      <aside className='text-accent text-xs'>
+      <aside className={STYLES.aside}>
         &copy; {new Date().getFullYear()},{' '}
         <span>Narin Rico Sundarabhaya c/o Polyhedron Projects LLC.</span>
       </aside>
