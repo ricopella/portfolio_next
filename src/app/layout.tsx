@@ -1,3 +1,4 @@
+import Analytics from '@/components/Analytics';
 import Sider from '@/components/sider';
 import Footer from '@/sections/footer';
 import type { Metadata } from 'next';
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <link rel='icon' href='/favicon.ico' sizes='any' />
+      <Analytics />
       <body className={inter.className} data-theme='forest'>
         <main className='h-full max-w-screen grid w-full  relative font-sans uppercase'>
           <Sider />
