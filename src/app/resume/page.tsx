@@ -1,25 +1,16 @@
-'use client';
-
 import Animated from '@/components/animated';
 import Image from 'next/image';
 import Contact from './contact';
 import Education from './education';
 import Experience from './experience';
 import Skills from './skills';
+import styles from './styles';
 
 export default function Resume() {
   return (
-    <div
-      className='prose grid gap-4 grid-cols-1 py-4 my-24 mx-auto rounded-md drop-shadow-lg bg-base-200 lg:w-resumeDesktop lg:max-w-resumeDesktop lg:h-resumeDesktop w-resumeSmall max-w-resumeSmall'
-      style={{
-        gridTemplateRows: `8rem 1fr`,
-      }}
-    >
-      <Animated
-        key='resume'
-        className='grid relative w-full  sm:grid-cols-4 grid-cols-1'
-      >
-        <div className='col-span-1 align-middle justify-center hidden md:grid'>
+    <div {...styles.container}>
+      <Animated key='resume' {...styles.heading}>
+        <div {...styles.headingImage}>
           <Image
             src='/images/nrs2.jpeg'
             alt='Narin Rico Sundarabhaya'
@@ -28,15 +19,11 @@ export default function Resume() {
             className='rounded-md'
           />
         </div>
-        <div className='p-4 align-middle col-span-3 grid h-full justify-center'>
-          <div className='h-max my-auto'>
-            <h1 className='text-2xl mb-0 forrest:text-neutral-content'>
-              Narin Sundarabhaya
-            </h1>
-            <h2 className='text-sm my-0 forrest:text-neutral-content'>
-              Full-Stack Developer
-            </h2>
-            <p className='text-xs mb-0 forrest:text-neutral-content hidden sm:grid'>
+        <div {...styles.headingContent}>
+          <div {...styles.headingInner}>
+            <h1 {...styles.headingTitle}>Narin Sundarabhaya</h1>
+            <h2 {...styles.headingSubtitle}>Full-Stack Developer</h2>
+            <p {...styles.headingDescription}>
               Versatile Senior Software Engineer with a proven track record in
               both corporate and freelance settings. Experienced in guiding
               small businesses to market, securing funding through MVP
@@ -45,14 +32,14 @@ export default function Resume() {
           </div>
         </div>
       </Animated>
-      <div className='grid gap-4 overflow-hidden md:grid-cols-resumeBodyDesktop grid-rows-max-2'>
+      <Animated key='column' {...styles.columnOne}>
         <div>
           <Contact />
           <Skills />
           <Education />
         </div>
         <Experience />
-      </div>
+      </Animated>
     </div>
   );
 }

@@ -5,6 +5,11 @@ import { useEffect } from 'react';
 
 type Theme = 'forest' | 'emerald';
 
+const STYLES = {
+  label: `swap swap-rotate`,
+  svg: `fill-current w-10 h-10`,
+};
+
 const SwitchTheme = () => {
   const [theme, setTheme] = useLocalStorage<Theme>('theme', 'emerald');
 
@@ -18,12 +23,12 @@ const SwitchTheme = () => {
   }, [theme]);
 
   return (
-    <label className='swap swap-rotate'>
+    <label className={STYLES.label}>
       <input type='checkbox' onClick={toggleTheme} />
 
       {/* sun icon */}
       <svg
-        className='swap-on fill-current w-10 h-10'
+        className={`swap-on ${STYLES.svg}`}
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
       >
@@ -32,7 +37,7 @@ const SwitchTheme = () => {
 
       {/* moon icon */}
       <svg
-        className='swap-off fill-current w-10 h-10'
+        className={`swap-off ${STYLES.svg}`}
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
       >

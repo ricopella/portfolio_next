@@ -1,6 +1,19 @@
 import Section from '@/components/section';
 import Image from 'next/image';
 
+const CONTENT = [
+  `I work across the many fields of web development and design to craft experiences for users that are both innovative and effective. I use web technologies known for adaptability and dynamism, to create aesthetically pleasing online stores and data-driven applications that put usability first. However, in order to remain competitive, I am always updating my toolkit.`,
+  `Based in Los Angeles and Bangkok, my diverse work experience—spanning full-time roles at innovative firms to freelance projects—has equipped me with invaluable insights into global digital trends and nuances.`,
+  `When I'm not writing code or working in groups, I enjoy a wide variety of activities. I am a firm believer in the benefits of leading an active lifestyle. Because of my interest in the visual arts, I frequently visit galleries, and I am always on the lookout for a new and exciting coffee shop. My interest in music began at an early age, and before I began working on digital experiences, I spent more than a decade as a professional DJ.`,
+  `I take an artistic and methodical approach while designing interactive digital experiences. Let's work together to convey your digital story with the right amount of imagination and technical know-how.`,
+];
+
+const STYLES = {
+  container: `mx-auto w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 h-full align-middle`,
+  imageContainer: `grid col-span-1 lg:col-span-1 justify-center`,
+  text: `normal-case`,
+};
+
 export default function AboutMe() {
   return (
     <Section
@@ -9,8 +22,8 @@ export default function AboutMe() {
       sectionStyles='bg-base-200'
       fullScreen={false}
     >
-      <div className='mx-auto w-4/5 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 h-full align-middle'>
-        <div className='grid col-span-1 lg:col-span-1 justify-center'>
+      <div className={STYLES.container}>
+        <div className={STYLES.imageContainer}>
           <Image
             src='/images/nrs.jpg'
             alt='Narin Rico Sundarabhaya'
@@ -19,17 +32,12 @@ export default function AboutMe() {
             className=' rounded-md shadow-xl'
           />
         </div>
-
         <div className='grid gap-4 col-span-1 lg:col-span-2'>
-          <p className='normal-case'>
-            {`I create results-driven digital experiences in the lively realms of web development and design. I design beautiful online shops and data-driven platforms for businesses with utility in mind. I use React for its dynamic possibilities, but my toolset is continually changing to stay current.`}
-          </p>
-          <p className='normal-case'>
-            {`Based in Los Angeles and Bangkok, I've had the opportunity to work with a wide range of customers while learning about global digital trends and subtleties. Away from the computer, my days are spent experimenting with plant-based meals, listening to music, and rooting for New England sports teams. Music has always been a love of mine. I've been telling stories through music since I was a teenager, with my turntables and drum machine as regular friends. My DJ group, Music Please, even had its origins in a radio show that aired for an incredible 7 years.`}
-          </p>
-          <p className='normal-case'>
-            {`My approach to digital experience creation is creative and systematic. If you need creativity and technological expertise, I can help you create the right digital tale.`}
-          </p>
+          {CONTENT.map((c, index) => (
+            <p key={`about_tme_${index}`} className={STYLES.text}>
+              {c}
+            </p>
+          ))}
         </div>
       </div>
     </Section>

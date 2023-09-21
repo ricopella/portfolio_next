@@ -1,4 +1,34 @@
 const styles = {
+  container: {
+    className: `prose grid gap-4 grid-cols-1 py-4 my-24 mx-auto rounded-md drop-shadow-lg bg-base-200 lg:w-resumeDesktop lg:max-w-resumeDesktop lg:h-resumeDesktop w-resumeSmall max-w-resumeSmall`,
+    style: {
+      gridTemplateRows: `8rem 1fr`,
+    },
+  },
+  heading: {
+    className: `grid relative w-full  sm:grid-cols-4 grid-cols-1`,
+  },
+  headingImage: {
+    className: `col-span-1 align-middle justify-center hidden md:grid`,
+  },
+  headingContent: {
+    className: `p-4 align-middle col-span-3 grid h-full justify-center`,
+  },
+  headingInner: {
+    className: `h-max my-auto`,
+  },
+  headingTitle: {
+    className: `text-2xl mb-0 forrest:text-neutral-content`,
+  },
+  headingSubtitle: {
+    className: `text-sm my-0 forrest:text-neutral-content`,
+  },
+  headingDescription: {
+    className: `text-xs mb-0 forrest:text-neutral-content hidden sm:grid`,
+  },
+  columnOne: {
+    className: `grid gap-4 overflow-hidden md:grid-cols-resumeBodyDesktop grid-rows-max-2`,
+  },
   contactRowItem: {
     className: `grid px-4 gap-2 text-xs`,
     inline: {
