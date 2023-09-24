@@ -15,7 +15,7 @@ export default function Contact() {
       sectionStyles='bg-base-200'
     >
       <Animated key='contact' className={STYLES.container}>
-        <p>
+        <p className='normal-case'>
           Whether you&apos;re a company looking to add to your team, a business
           owner looking to build an app or website with a freelance web
           developer, a developer looking to collaborate on a project, or just
