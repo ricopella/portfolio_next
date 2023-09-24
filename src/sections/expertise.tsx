@@ -7,10 +7,11 @@ const STYLES = {
       'grid lg:grid-cols-4 w-4/5 mx-auto gap-8 justify-center my-10 sm:grid-cols-2',
   },
   card: {
-    className: 'card w-full shadow-xl bg-neutral text-neutral-content',
+    className:
+      'card w-full shadow-xl bg-neutral text-neutral-content grid grid-rows-2',
   },
   cardBody: {
-    className: 'card-body',
+    className: 'card-body pt-0',
   },
   itemContainer: {
     className: 'flex flex-col items-center',
@@ -19,7 +20,7 @@ const STYLES = {
     className: 'card-title text-center text-m',
   },
   itemDescriptions: {
-    className: 'text-sm',
+    className: 'text-sm normal-case',
   },
 };
 
@@ -66,13 +67,8 @@ export default function Expertise() {
       <div {...STYLES.container}>
         {ITEMS.map((item) => (
           <div {...STYLES.card} key={item.title}>
-            <figure>
-              <Image
-                src={item.imageSrc}
-                width={200}
-                height={200}
-                alt={item.imageAlt}
-              />
+            <figure className='relative m-4'>
+              <Image src={item.imageSrc} fill alt={item.imageAlt} />
             </figure>
             <div {...STYLES.cardBody}>
               <h2 {...STYLES.itemHeadings}>{item.title}</h2>

@@ -15,7 +15,7 @@ const STYLES = {
     className: `drawer-content`,
   },
   drawerButton: {
-    className: `btn btn-ghost btn-circle  swap swap-rotate fixed top-4 left-4`,
+    className: `btn btn-circle btn-outline btn-info swap swap-rotate fixed top-4 left-4`,
   },
   drawerButtonIcon: `fill-primary`,
   drawerSide: {
