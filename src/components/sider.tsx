@@ -6,10 +6,10 @@ import SwitchTheme from './themeSwitcher';
 
 const STYLES = {
   drawer: {
-    className: `drawer absolute z-50`,
+    className: `drawer z-50`,
   },
   drawerToggle: {
-    className: `drawer-toggle absolute`,
+    className: `drawer-toggle`,
   },
   drawerContent: {
     className: `drawer-content`,
@@ -43,6 +43,13 @@ export default function Sider() {
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Close the drawer
+    const drawer = document.getElementById('my-drawer');
+    if (drawer) {
+      //  click the checkbox to close the drawer
+      drawer.click();
     }
   };
 
@@ -80,24 +87,28 @@ export default function Sider() {
         <label htmlFor='my-drawer' {...STYLES.drawerSideOverlay} />
         <input id='my-drawer' type='checkbox' {...STYLES.drawerToggle} />
 
-        <ul {...STYLES.drawerUl}>
+        <div {...STYLES.drawerUl}>
           <SwitchTheme />
-          <li>
-            <a onClick={() => handleAnchorClick('Home')}>Home</a>
-          </li>
-          <li>
-            <a onClick={() => handleAnchorClick('AboutMe')}>About Me</a>
-          </li>
-          <li>
-            <a onClick={() => handleAnchorClick('CaseStudies')}>Case Studies</a>
-          </li>
-          <li>
-            <a onClick={() => handleAnchorClick('Contact')}>Contact</a>
-          </li>
-          <li>
-            <Link href='/resume'>Resume</Link>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <a onClick={() => handleAnchorClick('Home')}>Home</a>
+            </li>
+            <li>
+              <a onClick={() => handleAnchorClick('AboutMe')}>About Me</a>
+            </li>
+            <li>
+              <a onClick={() => handleAnchorClick('CaseStudies')}>
+                Case Studies
+              </a>
+            </li>
+            <li>
+              <a onClick={() => handleAnchorClick('Contact')}>Contact</a>
+            </li>
+            <li>
+              <Link href='/resume'>Resume</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
