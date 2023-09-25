@@ -81,7 +81,9 @@ export default function Sider() {
         <input id='my-drawer' type='checkbox' {...STYLES.drawerToggle} />
 
         <ul {...STYLES.drawerUl}>
-          <SwitchTheme />
+          <li>
+            <SwitchTheme />
+          </li>
           <li>
             <a onClick={() => handleAnchorClick('Home')}>Home</a>
           </li>
