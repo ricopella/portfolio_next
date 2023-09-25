@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 type Theme = 'forest' | 'emerald';
 
 const STYLES = {
-  label: `swap swap-rotate`,
+  label: `btn btn-ghost swap swap-rotate w-max ml-auto`,
   svg: `fill-current w-10 h-10`,
 };
 

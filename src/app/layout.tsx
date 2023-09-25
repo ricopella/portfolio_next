@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang='en'>
       <link rel='icon' href='/favicon.ico' sizes='any' />
       <Analytics />
-      <body className={inter.className} data-theme='forest'>
+      <body className={inter.className}>
         <main className='max-w-screen grid w-full h-full relative font-sans uppercase'>
           <Sider />
           {children}
