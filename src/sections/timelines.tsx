@@ -2,6 +2,7 @@
 
 import Section from '@/components/section';
 import Image from 'next/image';
+import React from 'react';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -230,43 +231,46 @@ export default function Timeline() {
     >
       <VerticalTimeline lineColor='hsl(var(--p))'>
         {TIMELINE.map((item) => (
-          <VerticalTimelineElement
-            className={STYLES.timelineItem}
-            textClassName={STYLES.timeLineText}
-            contentArrowStyle={{ borderRight: '7px solid hsl(var(--p))' }}
-            date={item.date}
-            iconClassName={STYLES.icon}
-            icon={
-              <Image
-                src={item.imgSrc}
-                width={40}
-                height={40}
-                alt={item.imgAlt}
-              />
-            }
-            key={item.title}
-          >
-            <details className={STYLES.detail}>
-              <summary className={STYLES.summary}>
-                <h3 className={STYLES.summaryTitle}>{item.title}</h3>
-                <h4 className={STYLES.summarySubtitle}>{item.subtitle}</h4>
-                <div className={STYLES.tagsContainer}>
-                  {item.tags.map((tag) => (
-                    <div className='badge badge-primary' key={tag}>
-                      {tag}
-                    </div>
+          <React.Fragment key={item.title}>
+            <VerticalTimelineElement
+              className={STYLES.timelineItem}
+              textClassName={STYLES.timeLineText}
+              contentArrowStyle={{ borderRight: '7px solid hsl(var(--p))' }}
+              date={item.date}
+              iconClassName={STYLES.icon}
+              visible
+              icon={
+                <Image
+                  src={item.imgSrc}
+                  width={40}
+                  height={40}
+                  alt={item.imgAlt}
+                />
+              }
+              key={item.title}
+            >
+              <details className={STYLES.detail}>
+                <summary className={STYLES.summary}>
+                  <h3 className={STYLES.summaryTitle}>{item.title}</h3>
+                  <h4 className={STYLES.summarySubtitle}>{item.subtitle}</h4>
+                  <div className={STYLES.tagsContainer}>
+                    {item.tags.map((tag) => (
+                      <div className='badge badge-primary' key={tag}>
+                        {tag}
+                      </div>
+                    ))}
+                  </div>
+                </summary>
+                <div className={STYLES.collapseContent}>
+                  {item.description.map((desc, i) => (
+                    <p key={i} className='normal-case !text-sm'>
+                      {desc}
+                    </p>
                   ))}
                 </div>
-              </summary>
-              <div className={STYLES.collapseContent}>
-                {item.description.map((desc, i) => (
-                  <p key={i} className='normal-case !text-sm'>
-                    {desc}
-                  </p>
-                ))}
-              </div>
-            </details>
-          </VerticalTimelineElement>
+              </details>
+            </VerticalTimelineElement>
+          </React.Fragment>
         ))}
       </VerticalTimeline>
     </Section>
