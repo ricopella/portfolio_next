@@ -24,7 +24,7 @@ const styles = {
     className: `text-sm my-0 forrest:text-neutral-content`,
   },
   headingDescription: {
-    className: `text-xs mb-0 forrest:text-neutral-content hidden sm:grid`,
+    className: `text-xs mb-0 forrest:text-neutral-content hidden sm:grid normal-case`,
   },
   columnOne: {
     className: `grid gap-4 overflow-hidden md:grid-cols-resumeBodyDesktop grid-rows-max-2`,
@@ -63,7 +63,7 @@ const styles = {
     },
   },
   skillName: {
-    className: '',
+    className: 'text-sm',
   },
   experienceBody: {
     className: 'grid gap-2 pr-4 m-4 md:m-0',
@@ -89,6 +89,9 @@ const styles = {
   },
   experienceUl: {
     className: 'ps-3 text-xs list-disc',
+  },
+  experienceLi: {
+    className: 'normal-case',
   },
   educationBody: {
     className: 'grid px-4',
