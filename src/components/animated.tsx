@@ -4,14 +4,12 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-export default function Section({
+export default function Animated({
   children,
   className,
-  key,
 }: {
   children: React.ReactNode;
   className?: string;
-  key: string;
 }) {
   const animation = useAnimation();
   const [ref, inView] = useInView({
@@ -27,7 +25,6 @@ export default function Section({
   return (
     <motion.div
       className={className ?? ''}
-      key={key}
       ref={ref}
       exit='exit'
       initial={'hidden'}

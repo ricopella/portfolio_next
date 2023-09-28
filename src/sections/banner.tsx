@@ -26,7 +26,7 @@ export default function Banner() {
   return (
     <div id='#Home' {...STYLES.hero}>
       <div {...STYLES.heroOverlay} />
-      <Animated key={'Banner'} {...STYLES.heroContentContainer}>
+      <Animated {...STYLES.heroContentContainer}>
         <h1 {...STYLES.heroMainHeading}>Narin Rico</h1>
         <h1 {...STYLES.heroMainHeading}>Sundarabhaya</h1>
         <h2 {...STYLES.heroSubHeading}>Your Architect for the Digital World</h2>

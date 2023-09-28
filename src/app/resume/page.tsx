@@ -9,7 +9,7 @@ import styles from './styles';
 export default function Resume() {
   return (
     <div {...styles.container}>
-      <Animated key='resume' {...styles.heading}>
+      <Animated {...styles.heading}>
         <div {...styles.headingImage}>
           <Image
             src='/images/nrs2.jpeg'
@@ -32,7 +32,7 @@ export default function Resume() {
           </div>
         </div>
       </Animated>
-      <Animated key='column' {...styles.columnOne}>
+      <Animated {...styles.columnOne}>
         <div>
           <Contact />
           <Skills />
