@@ -16,7 +16,7 @@ const config: Config = {
         'extra-color': 'var(--extra-light-grey)',
       },
       height: {
-        resumeDesktop: `297mm`,
+        resumeDesktop: `280mm`,
       },
       gridTemplateColumns: {
         resumeBodyDesktop: `13.5rem 1fr`,

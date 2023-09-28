@@ -8,8 +8,8 @@ import styles from './styles';
 
 export default function Resume() {
   return (
-    <div {...styles.container}>
-      <Animated key='resume' {...styles.heading}>
+    <Animated key='resume' {...styles.container}>
+      <div {...styles.heading}>
         <div {...styles.headingImage}>
           <Image
             src='/images/nrs2.jpeg'
@@ -31,15 +31,15 @@ export default function Resume() {
             </p>
           </div>
         </div>
-      </Animated>
-      <Animated key='column' {...styles.columnOne}>
+      </div>
+      <div key='column' {...styles.columnOne}>
         <div>
           <Contact />
           <Skills />
           <Education />
         </div>
         <Experience />
-      </Animated>
-    </div>
+      </div>
+    </Animated>
   );
 }

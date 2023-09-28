@@ -16,8 +16,7 @@ export default function Timezones() {
     <div {...STYLES.container}>
       {timezone && (
         <div className="after:content-['_|_'] after:ml-4">
-          {timezone ?? 'Current'}:
-          <Clock format={'HH:mm'} ticking={true} />
+          {timezone}: <Clock format={'HH:mm'} ticking={true} />
         </div>
       )}
       <div className="after:content-['_|_'] after:ml-4">
