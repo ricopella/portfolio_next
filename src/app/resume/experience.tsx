@@ -1,4 +1,4 @@
-import STYLES from './styles';
+import STYLES from './styles'
 
 export default function Experience() {
   return (
@@ -7,7 +7,7 @@ export default function Experience() {
       <div {...STYLES.experienceContainer}>
         <div>
           <div {...STYLES.experienceFirstTitleRow}>
-            <div {...STYLES.experienceFirstTitle}>Co-Owner / Developer</div>
+            <div {...STYLES.experienceFirstTitle}>Freelance Tech Lead</div>
             <a
               href='https://polyhedronprojects.com'
               target='_blank'
@@ -19,6 +19,12 @@ export default function Experience() {
             <i {...STYLES.experienceFirstTitleDate}>2017 - Present</i>
           </div>
           <ol {...STYLES.experienceUl}>
+          <li {...STYLES.experienceLi}>
+              AI Image Generation: Co-founded and independently engineered a web application that uses AI for generating unique image packs for users to purchase and download in real time.
+            </li>
+            <li {...STYLES.experienceLi}>
+              Multi-Vendor Marketplace: Hired as the technical partner in a new venture, I took on the role of CTO and built the entire technology stack for a comprehensive online golf marketplace, turning it into a one-stop shop for golfers.
+            </li>
             <li {...STYLES.experienceLi}>
               Video Chat Application: Developed a Twilio-based video chat MVP
               hosted on Vercel, aiding a client in securing initial funding.

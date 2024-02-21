@@ -1,15 +1,41 @@
 'use client';
 
-import Section from '@/components/section';
-import Image from 'next/image';
-import React from 'react';
+import Section from '@/components/section'
+import Image from 'next/image'
+import React from 'react'
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+} from 'react-vertical-timeline-component'
+import 'react-vertical-timeline-component/style.min.css'
 
 const TIMELINE = [
+  {
+    date: '2023 - Current',
+    title: 'Parscape',
+    subtitle: 'Multi-Vendor Marketplace',
+    tags: ['React', 'TypeScript', 'NextJS'],
+    imgSrc: '/images/web.svg',
+    imgAlt: 'Web App Case Study',
+    description: [
+      `The Problem: Parscape, a newly established company aimed at reinventing the golfing marketplace, came across a unique challenge. The co-founders had invested a year in research and planning and had signed a Master Service Agreement with a service offering headless multi-vendor capabilities. But their vision went beyond this infrastructure - they required a storefront to be built that could translate their designs and plans into a functional marketplace. Their ambitious goal was to create a consolidated platform for golfers to discover and shop from a wide spectrum of independent golfing brands.`,
+      `The Solution: As CTO, I took the unique challenge head-on. I started off by fully understanding the owners' vision and the unique needs of our target audience - the golfers and independent brands. Leveraging the multi-vendor service's capabilities, I designed and engineered the storefront in alignment with the co-founders' plans and designs. I built a seamless integration mechanism that could connect the storefront with the different Shopify stores owned by the various independent brands.`,
+      `The Why: The purpose of the Parscape project was twofold. For golfers, an all-in-one shopping platform was created, simplifying their shopping experience and making it more convenient. They could now find all the brands, designs, and golfing accessories in one place while ensuring accurate, real-time information. For independent golf brands, the platform provided a much-needed visibility boost, exposing their products to a broader audience, all without the need for managing an additional platform. These efforts played a key role in launching a successful platform ready to revolutionize the golfing marketplace - a testament to innovation and thoughtful engineering.`,
+    ],
+  },
+  {
+    date: '2023 - Current',
+    title: 'Jiso.ai',
+    subtitle: 'AI generated bespoke portrait',
+    tags: ['React', 'TypeScript', 'NextJS'],
+    imgSrc: '/images/web.svg',
+    imgAlt: 'Web App Case Study',
+    description: [
+      `The Problem: Our venture began with a spark: AI-generated bespoke images, inspired by my co-founder. While the idea garnered significant social media attention and demand, turning it into a scalable, user-friendly web application was the challenge.`,
+      `The Solution: As the founding developer, I single-handedly engineered the holistic web application. I built user management, integrated an online store, established a secure Stripe payment system, and designed the database schema. I adapted to understand the AI components, deploying pods for the image generation tasks and creating edge functions to manage batches. With real-time results, robust admin management, and internationalization, users could purchase and download their personalized image packs almost instantly`,
+      `The Why: The aim was to convert an innovative AI-driven idea into a scalable web application. Our platform extended the reach and speed of the bespoke AI image service, transformed customer experience, and turned individualized demand into a commercially viable, international product.`,
+    ],
+  },
   {
     date: '2020 - 2023',
     title: 'Alpha.io',

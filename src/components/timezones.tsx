@@ -1,7 +1,7 @@
 'use client';
 
-import useTimezone from '@/hooks/useTimezone';
-import Clock from 'react-live-clock';
+import useTimezone from '@/hooks/useTimezone'
+import Clock from 'react-live-clock'
 
 const STYLES = {
   container: {
@@ -16,7 +16,7 @@ export default function Timezones() {
     <div {...STYLES.container}>
       {timezone && (
         <div className="after:content-['_|_'] after:ml-4">
-          {timezone}: <Clock format={'HH:mm'} ticking={true} />
+          Current: <Clock format={'HH:mm'} ticking={true} />
         </div>
       )}
       <div className="after:content-['_|_'] after:ml-4">

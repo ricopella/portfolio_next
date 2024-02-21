@@ -1,9 +1,10 @@
-import AboutMe from '@/sections/aboutme';
-import Banner from '@/sections/banner';
-import Contact from '@/sections/contact';
-import Expertise from '@/sections/expertise';
-import dynamic from 'next/dynamic';
-import Timeline from '../sections/timelines';
+import Banner from '@/sections/banner'
+import dynamic from 'next/dynamic'
+
+const DynamicExpertise = dynamic(() => import('@/sections/expertise'))
+const DynamicAboutMe = dynamic(() => import('@/sections/aboutme'))
+const DynamicTimeline = dynamic(() => import('@/sections/timelines'))
+const DynamicContact = dynamic(() => import('@/sections/contact'))
 const Timezones = dynamic(() => import('@/components/timezones'), {
   ssr: false,
 }); // fix server client time mismatch
@@ -13,10 +14,10 @@ export default function Home() {
     <>
       <Timezones />
       <Banner />
-      <Expertise />
-      <AboutMe />
-      <Timeline />
-      <Contact />
+      <DynamicExpertise />
+      <DynamicAboutMe />
+      <DynamicTimeline />
+      <DynamicContact />
     </>
   );
 }
