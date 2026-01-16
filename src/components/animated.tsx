@@ -1,8 +1,6 @@
 'use client';
 
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'motion/react'
 
 export default function Animated({
   children,
@@ -11,48 +9,15 @@ export default function Animated({
   children: React.ReactNode;
   className?: string;
 }) {
-  const animation = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      animation.start('visible');
-    }
-  }, [animation, inView]);
-
   return (
     <motion.div
       className={className ?? ''}
-      ref={ref}
-      exit='exit'
-      initial={'hidden'}
-      animate={animation}
-      variants={{
-        exit: {
-          opacity: 0,
-          y: 20,
-          transition: {
-            duration: 0.5,
-          },
-        },
-        hidden: {
-          opacity: 0,
-          y: 20,
-          transition: {
-            duration: 0.5,
-          },
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.5,
-            yoyo: 5, // number of bounces
-            ease: 'easeOut',
-          },
-        },
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.5,
+        ease: 'easeOut',
       }}
     >
       {children}
