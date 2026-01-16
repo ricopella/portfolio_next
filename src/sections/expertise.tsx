@@ -66,7 +66,7 @@ export default function Expertise() {
     >
       <div {...STYLES.container}>
         {ITEMS.map((item) => (
-          <div {...STYLES.card} key={item.title}>
+          <div key={item.title} {...STYLES.card}>
             <figure className='relative m-4'>
               <Image src={item.imageSrc} fill alt={item.imageAlt} />
             </figure>

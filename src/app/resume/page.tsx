@@ -1,10 +1,10 @@
-import Animated from '@/components/animated';
-import Image from 'next/image';
-import Contact from './contact';
-import Education from './education';
-import Experience from './experience';
-import Skills from './skills';
-import styles from './styles';
+import Animated from '@/components/animated'
+import Contact from '@/components/resume/contact'
+import Education from '@/components/resume/education'
+import Experience from '@/components/resume/experience'
+import Skills from '@/components/resume/skills'
+import styles from '@/components/resume/styles'
+import Image from 'next/image'
 
 export default function Resume() {
   return (

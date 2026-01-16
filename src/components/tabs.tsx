@@ -8,7 +8,7 @@ const style = {
 };
 
 export function Tabs({ children }: { children: React.ReactNode[] }) {
-  const childrenArray = Children.toArray(children) as ReactElement[];
+  const childrenArray = Children.toArray(children) as ReactElement<any>[];
   const [current, setCurrent] = useState(childrenArray[0].key);
 
   const newChildren = childrenArray.map((child) =>
